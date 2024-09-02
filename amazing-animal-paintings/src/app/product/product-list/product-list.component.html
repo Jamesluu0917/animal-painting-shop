@@ -1,11 +1,12 @@
 <div class="container">
   <h2>Our latest collection</h2>
 
-  <!-- Search field -->
+  <!-- Searching functionality -->
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event)" placeholder="Search" />
   </mat-form-field>
 
+  <!-- Sorting functionality -->
   <mat-form-field class="sort-dropdown">
     <mat-select
       (selectionChange)="sortProducts($event.value)"
