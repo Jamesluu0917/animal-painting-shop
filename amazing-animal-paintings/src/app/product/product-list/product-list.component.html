@@ -1,7 +1,13 @@
 <div class="container">
   <h2>Our latest collection</h2>
+
+  <!-- Search field -->
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search" />
+  </mat-form-field>
+
   <div fxLayout="row wrap" fxLayoutGap="50px grid">
-    <div *ngFor="let product of products">
+    <div *ngFor="let product of filteredProducts">
       <mat-card
         class="product-card"
         (click)="addToCart(product)"
